@@ -1,21 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  headerMessage: 'Coming Soon',
+  headerMessage: 'this is a header message',
   firstName: null,
   lastName: null,
   emailAddress: null,
 
   isValid: Ember.computed('firstName', 'lastName', 'emailAddress',
     function () {
+      let mailRegex = /^.+@.+\..+$/;
       return (
         this.get('firstName') &&
         this.get('lastName') &&
-        this.get('emailAddress')
+        mailRegex.test(this.get('emailAddress'))
       )
     }),
 
   isDisabled: Ember.computed.not('isValid'),
+
   actions: {
     saveNewEntry() {
       const email = this.get('emailAddress');
@@ -32,6 +34,7 @@ export default Ember.Controller.extend({
         this.set('firstName', null);
         this.set('lastName', null);
       });
-    }
+    },
+
   }
 });
