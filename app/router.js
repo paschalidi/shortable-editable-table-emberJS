@@ -6,8 +6,10 @@ const Router = Ember.Router.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
-  this.route('inselberg');
+Router.map(function () {
+  this.route('entries', function () {
+    this.route('new');
+  });
 });
 
 export default Router;
