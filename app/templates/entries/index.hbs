@@ -24,6 +24,9 @@
       <td>{{entry.hip}}</td>
       <td>{{entry.address}}</td>
       <td>{{entry.email}}</td>
+      <td>
+        <button class="btn btn-danger btn-xs" {{action 'deleteEntry' entry}}>x</button>
+      </td>
     </tr>
   {{/each}}
   </tbody>

@@ -5,6 +5,12 @@ export default Ember.Route.extend({
 
   model() {
     return this.store.findAll('entry');
-  }
+  },
 
+  actions: {
+
+    deleteEntry(entry) {
+      entry.destroyRecord();
+    }
+  }
 });
