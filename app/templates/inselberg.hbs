@@ -1,0 +1,47 @@
+<div class="jumbotron text-center">
+  <h1>{{headerMessage}}</h1>
+  <br /><br />
+
+  <div class="form-horizontal form-group form-group-lg row">
+    <div class="col-xs-3">
+      {{input
+        autofocus="autofocus"
+        type="text"
+        value=firstName
+        class="form-control"
+        placeholder="First Name"
+      }}
+    </div>
+
+    <div class="col-xs-3">
+      {{input
+        type="text"
+        value=lastName
+        class="form-control"
+        placeholder="Last Name"
+      }}
+    </div>
+
+    <div class="col-xs-3">
+      {{input
+        type="email"
+        value=emailAddress
+        class="form-control"
+        placeholder="E-mail address"
+      }}
+    </div>
+
+    <div class="col-xs-3">
+      <button
+        class="btn btn-primary btn-lg btn-block"
+        {{action 'saveNewEntry'}}
+        disabled={{isDisabled}}>
+        Add
+      </button>
+    </div>
+  </div>
+
+  {{#if responseMessage}}
+    <div class="alert alert-success">{{responseMessage}}</div>
+  {{/if}}
+</div>
