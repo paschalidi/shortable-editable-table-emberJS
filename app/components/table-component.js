@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
   sortedEntries: Ember.computed.sort('theEntries', 'sortDefinition'),
   sortBy: 'firstName',
   reverseSort: false,
@@ -9,11 +8,9 @@ export default Ember.Component.extend({
     let sortOrder = this.get('reverseSort') ? 'desc' : 'asc';
     return [`${this.get('sortBy')}:${sortOrder}`];
   }),
-
   actions: {
     deleteEntry(entry) {
       entry.destroyRecord();
     }
   }
-
 });
