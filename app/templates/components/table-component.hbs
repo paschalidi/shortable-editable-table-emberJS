@@ -1,5 +1,8 @@
 <div>
-  Sort by
+  <div>
+    {{input type='checkbox' checked=reverseSort}} Reverse sort
+  </div>
+  Sort by:
   {{#radio-button value='firstName' groupValue=sortBy}} First Name {{/radio-button}}
   {{#radio-button value='lastName' groupValue=sortBy}} Last Name {{/radio-button}}
   {{#radio-button value='age' groupValue=sortBy}} Age {{/radio-button}}
@@ -8,9 +11,6 @@
   {{#radio-button value='hip' groupValue=sortBy}} Hip {{/radio-button}}
   {{#radio-button value='address' groupValue=sortBy}} Address {{/radio-button}}
   {{#radio-button value='email' groupValue=sortBy}} E-mail {{/radio-button}}
-  <div>
-    {{input type='checkbox' checked=reverseSort}} Reverse sort
-  </div>
 </div>
 <br>
 <table class="table table-hover">
