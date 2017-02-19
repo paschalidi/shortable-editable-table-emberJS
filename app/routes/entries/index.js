@@ -10,6 +10,5 @@ export default Ember.Route.extend({
     deleteEntry(entry) {
       entry.destroyRecord();
     }
-
   }
 });
