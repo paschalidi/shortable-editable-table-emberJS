@@ -8,6 +8,7 @@ export default Ember.Route.extend({
 
   actions: {
     saveEntry(newEntry) {
+      console.log(newEntry);
       newEntry.save().then(() => this.transitionTo('entries'));
     },
 
