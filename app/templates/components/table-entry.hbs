@@ -1,0 +1,17 @@
+<div {{action "editEntry" on="doubleClick"}}>
+  {{#if isEditing}}
+    <form {{action "saveEditChanges" this on="submit"}}>
+      {{input autofocus type="text" value=value}}
+
+      <button {{action "cancelEditEntry"}} class="btn btn-sm btn-danger">
+        Cancel
+      </button>
+
+      <button {{action "saveEditChanges"}} class="btn btn-sm btn-success">
+        Save
+      </button>
+    </form>
+  {{else}}
+    {{value}}
+  {{/if}}
+</div>
