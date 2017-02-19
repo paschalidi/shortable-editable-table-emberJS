@@ -10,4 +10,5 @@ export default DS.Model.extend({
   hip:        DS.attr('string'),
   address:    DS.attr('string'),
   email:      DS.attr('string'),
+  location:   DS.attr('string')
 });

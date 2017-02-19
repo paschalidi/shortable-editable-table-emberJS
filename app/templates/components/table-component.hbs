@@ -24,6 +24,7 @@
     <th class="mouse-cursor">Hip</th>
     <th class="mouse-cursor">Address</th>
     <th class="mouse-cursor">E-mail</th>
+    <th class="mouse-cursor">Location</th>
     <th class="mouse-cursor"></th>
   </tr>
   </thead>
@@ -60,6 +61,10 @@
 
       <td class="mouse-cursor">
         {{#table-entry value = entry.email}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.location}}{{/table-entry}}
       </td>
 
       <td>
