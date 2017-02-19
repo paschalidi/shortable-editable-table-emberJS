@@ -1,0 +1,74 @@
+<div>
+  Sort by
+  {{#radio-button radioClass="rad" value='firstName' groupValue=sortBy}} First Name {{/radio-button}}
+  {{#radio-button radioClass="rad" value='lastName' groupValue=sortBy}} Last Name {{/radio-button}}
+  {{#radio-button radioClass="rad" value='age' groupValue=sortBy}} Age {{/radio-button}}
+  {{#radio-button radioClass="rad" value='bust' groupValue=sortBy}} Bust {{/radio-button}}
+  {{#radio-button radioClass="rad" value='waist' groupValue=sortBy}} Waist {{/radio-button}}
+  {{#radio-button radioClass="rad" value='hip' groupValue=sortBy}} Hip {{/radio-button}}
+  {{#radio-button radioClass="rad" value='address' groupValue=sortBy}} Address {{/radio-button}}
+  {{#radio-button radioClass="rad" value='email' groupValue=sortBy}} E-mail {{/radio-button}}
+  <div>
+    {{input type='checkbox' checked=reverseSort}} Reverse sort
+  </div>
+</div>
+<br>
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th class="mouse-cursor">First Name</th>
+    <th class="mouse-cursor">Last Name</th>
+    <th class="mouse-cursor">Age</th>
+    <th class="mouse-cursor">Bust</th>
+    <th class="mouse-cursor">Waist</th>
+    <th class="mouse-cursor">Hip</th>
+    <th class="mouse-cursor">Address</th>
+    <th class="mouse-cursor">E-mail</th>
+    <th class="mouse-cursor"></th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each sortedEntries as |entry|}}
+    <tr>
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.firstName}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.lastName}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.age}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.bust}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.waist}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.hip}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.address}}{{/table-entry}}
+      </td>
+
+      <td class="mouse-cursor">
+        {{#table-entry value = entry.email}}{{/table-entry}}
+      </td>
+
+      <td>
+        <button class="btn btn-danger btn-xs"
+          {{action "deleteEntry" entry}}
+        >x
+        </button>
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
