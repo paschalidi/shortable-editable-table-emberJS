@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/paschalidi/shortable-editable-table-emberJS.git <repository-url>` this repository
 * `cd <repository-url>`
 * `npm install`
 * `bower install`
