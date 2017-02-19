@@ -10,8 +10,9 @@ export default Ember.Component.extend({
     cancelEditEntry() {
       this.set('isEditing', false);
     },
+
     saveEditChanges() {
-      this.set('value', this.get('value'));
+      this.set('value', this.get('theValue'));
       this.set('isEditing', false);
     },
   }

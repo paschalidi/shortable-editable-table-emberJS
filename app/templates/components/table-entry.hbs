@@ -1,7 +1,7 @@
 <div {{action "editEntry" on="doubleClick"}}>
   {{#if isEditing}}
     <form {{action "saveEditChanges" this on="submit"}}>
-      {{input autofocus type="text" value=value}}
+      {{input autofocus type="text" value=theValue}}
 
       <button {{action "cancelEditEntry"}} class="btn btn-sm btn-danger">
         Cancel
